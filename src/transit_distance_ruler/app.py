@@ -170,6 +170,7 @@ def update_graph(agency, route, direction, start, end, is_km):
     if None in (agency, route, start, end):
         return px.scatter_map(), ""
     df = db.get_route_frame(agency, route, direction, start, end)
+    # TODO: more precise metrics. For now, use great-circle distance between stops.
     segments = haversine_distances(df.loc[["latitude", "longitude"]].to_numpy())
     length = segments[0, :].sum()
     direct_length = segments[0, -1]
