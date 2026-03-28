@@ -1,0 +1,28 @@
+[build-system]
+requires = ["uv_build >= 0.10.10, <0.12.0"]
+build-backend = "uv_build"
+
+[project]
+name = "transit_distance_ruler"
+version = "0.1.0"
+description = "Web application that computes the route distance between two stops on a transit route"
+readme = "README.md"
+requires-python = ">=3.14.0,<3.15.0a0"
+dependencies = [
+    "dash[cloud]>=4.1.0,<4.2.0",
+    "partridge>=1.1.2,<1.2.0",
+    "sqlalchemy>=2.0.0,<2.1.0",
+    "dash_daq>=0.6.0,<1.0.0",
+    "dash_bootstrap_components>=2.0.0,<2.1.0",
+    "scikit-learn>=1.8.0,<1.9.0"
+]
+authors = [
+    {name = "Scott Norton"}
+]
+license = "MIT"
+keywords = [
+    "transit",
+    "map",
+    "gtfs",
+    "distance"
+]
